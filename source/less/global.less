@@ -1,0 +1,38 @@
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #11126B;
+  color: #fff;
+  font-family: 'Montserrat', "Arial", sans-serif;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+section {
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 85vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+iframe {
+  border: none;
+}
+
+@media (max-width: @tablet-width-max) {
+  section {
+    height: auto;
+  }
+}

@@ -1,0 +1,155 @@
+.about {
+  background-color: #fff;
+  color: #000;
+  height: auto;
+  padding: 50px 0 0;
+  position: relative;
+}
+
+.about__container {
+  padding-bottom: 130px;
+  position: relative;
+}
+
+.about__title {
+  color: #0D0E54;
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.about__paragraph {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0 auto 30px;
+  padding: 0;
+  text-align: center;
+  width: 825px;
+}
+
+.about__list {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.about__item {
+  margin: 0 auto;
+  padding: 130px 0 0;
+  position: relative;
+  text-align: center;
+  width: 300px;
+
+  & h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 15px;
+    padding: 0;
+  }
+
+  & p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &::before {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+    height: 110px;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110px;
+  }
+
+  &--transparent {
+    &::before {
+      background-image: url("../img/visibility.svg");
+    }
+  }
+
+  &--efficient {
+    &::before {
+      background-image: url("../img/deadline.svg");
+    }
+  }
+
+  &--simple {
+    &::before {
+      background-image: url("../img/laptop.svg");
+    }
+  }
+}
+
+@media (max-width: @tablet-width-max) {
+  .about__title {
+    font-size: 28px;
+  }
+
+  .about__paragraph {
+    font-size: 16px;
+    width: 745px;
+  }
+
+  .about__item {
+    padding-top: 105px;
+    width: 200px;
+
+    & h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    & p {
+      font-size: 15px;
+    }
+
+    &::before {
+      height: 90px;
+      width: 90px;
+    }
+  }
+}
+
+@media (max-width: @mobile-width-max) {
+  .about {
+    padding: 40px 0;
+  }
+
+  .about__container {
+    padding-bottom: 0;
+  }
+
+  .about__title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .about__paragraph {
+    margin-bottom: 15px;
+    width: 300px;
+  }
+
+  .about__list {
+    display: block;
+  }
+
+  .about__item {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,94 @@
+.video {
+  padding: 50px 0;
+  position: relative;
+
+  &::before, &::after {
+    background-image: url("../img/dots-wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    height: 100%;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    z-index: -1;
+  }
+
+  &::before {
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.video__paragraph {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 28px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0;
+  text-align: center;
+  width: 800px;
+}
+
+.video__video {
+  height: 264px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  object-fit: contain;
+  width: 470px;
+
+  & iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.video__join {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: @tablet-width-max) {
+  .video__paragraph {
+    width: 650px;
+  }
+}
+
+@media (max-width: @mobile-width-max) {
+  .video {
+    padding: 40px 0;
+
+    &::after {
+      width: 100%;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+  .video__paragraph {
+    font-size: 16px;
+    line-height: 25px;
+    width: 100%;
+  }
+
+  .video__video {
+    height: 169px;
+    width: 301px;
+  }
+
+  .video__join {
+    font-size: 22px;
+  }
+}
